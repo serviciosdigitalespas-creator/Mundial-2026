@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: pas_user
+      POSTGRES_PASSWORD: secure_password
+      POSTGRES_DB: torneos_db
+    ports:
+      - "5432:5432"
